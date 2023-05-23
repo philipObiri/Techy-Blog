@@ -112,7 +112,7 @@ def post_share(request, post_id):
     sent = False
 
     if request.method == "POST":
-        # Form was submitted
+        # Form was submitted (that means the user has clicked the submit/send button)
         form = EmailPostForm(request.POST)
         if form.is_valid():
             # Form fields passed validation
