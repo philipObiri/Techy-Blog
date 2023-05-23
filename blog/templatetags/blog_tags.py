@@ -17,7 +17,7 @@ and filters of the application.
 """
 @register.simple_tag
 def total_posts():
-    return Post.published.count()
+    return Post.published.count()  #this returns all the Posts published using the count() method
     
 
 """We will create another tag to display the latest posts in the sidebar of

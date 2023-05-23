@@ -28,7 +28,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date="publish")
-    tags = TaggableManager()
+    tags = TaggableManager() # This allows us to add retrieve and remove tags fromfrom the Posts
     body = models.TextField()
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
